@@ -1,0 +1,25 @@
+{
+     "Bot": {
+        "Token": "",
+        "Prefix": ".",
+        "Developers": [""],
+        "status": "Astpod 🖤 Github",
+        "mongoURL": ""
+    },
+     "tag": {
+        "taglıTag": "",
+        "tagsızTag": "•"
+    },
+     "yetki": {
+        "erkek": ["", ""],
+        "kız": ["", ""],
+        "unregister": [""],
+        "register": [""]
+  },
+     "emoji": {
+        "evet": ""
+  },
+     "kanallar": {
+        "registerChat": ""
+  }
+}
