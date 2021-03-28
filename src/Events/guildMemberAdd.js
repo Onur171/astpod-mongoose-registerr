@@ -1,5 +1,5 @@
-const moment = require("moment"),
-moment.locale("tr"),
+const moment = require("moment");
+moment.locale("tr");
 const Base = require("../Base/Event"),
     { Client } = global,
     cfg = require('../../config.json');
