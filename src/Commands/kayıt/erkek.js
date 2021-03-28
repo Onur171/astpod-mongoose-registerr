@@ -25,7 +25,7 @@ const Database = require("../../../Member.js");
     const tag = member.user.username.includes(cfg.tag.taglıTag) ? cfg.tag.taglıTag : (cfg.tag.tagsızTag === "" ? cfg.tag.taglıTag : cfg.tag.tagsızTag);
     member.setNickname(`${tag} ${isim}`);
     member.roles.add(cfg.yetki.erkek);
-    member.roles.remvoe(cfg.yetki.remove);
+    member.roles.remove(cfg.yetki.remove);
     message.react(cfg.emoji.evet)
     message.channel.send(embed.setDescription(`${member} adlı kişiye başarılı şekilde <@&${cfg.yetki.erkek}> rolü verildi`))
     Database.findOne({SunucuID: message.guild.id, userID: member.id}, async (err, res) => {
