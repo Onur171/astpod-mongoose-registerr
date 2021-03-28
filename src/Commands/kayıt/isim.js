@@ -24,7 +24,7 @@ const cfg = require("../../../config.json");
     const tag = member.user.username.includes(cfg.tag.taglıTag) ? cfg.tag.taglıTag : (cfg.tag.tagsızTag === "" ? cfg.tag.taglıTag : cfg.tag.tagsızTag);
     member.setNickname(`${tag} ${isim}`);
     message.react(cfg.emoji.evet)
-    message.channel.send(embed.setDescription(`${member} adlı üye'nin "${tag} ${isim}" degiştirildi!`))
+    message.channel.send(embed.setDescription(`${member} adlı üye'nin ismi "${tag} ${isim}" olarak degiştirildi!`))
  }
 }
 
