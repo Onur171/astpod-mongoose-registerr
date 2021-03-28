@@ -11,9 +11,11 @@ class guildMemberAdd extends Base {
         });
     }
   
-async Execute(member) {
+async Execute(message) {
+   const args = message.content.slice(cfg.Bot.Prefix.length).trim().split(/ +/);
+   const member message.mentions.members.first() || message.guild.members.cache.get(args[0]);
   member.roles.add(cfg.yetki.unregister);
-  member.channels.cache.get(cfg.kanallar.registerChat).send(`
+  message.guild.channels.cache.get(cfg.kanallar.registerChat).send(`
 Sunucumuza hoş geldin ${member}
 
 Hesabın **${moment(member.user.createdAt).format("YYYY/MM/DD HH:mm:ss")}** tarihin de oluşturulmuş.
