@@ -10,7 +10,7 @@ class Ready extends Base {
     }
     async Execute() {
         console.log(`${Client.user.tag} başarıyla giriş yaptı!`);
-       Client.user.setPresence({ activity: { name: cfg.bot.status }, status: "idle" });
+       Client.user.setPresence({ activity: { name: cfg.Bot.status }, status: "idle" });
     }
 }
 
