@@ -16,7 +16,7 @@ async Execute(member) {
   Client.guild.channels.cache.get(cfg.kanallar.registerChat).send(`
 Sunucumuza hoş geldin ${member}
 
-Hesabın ${member.client.tarihHesapla(member.user.createdAt)}** tarihinde oluşturulmuş.
+Hesabın **${member.client.tarihHesapla(member.user.createdAt)}** tarihinde oluşturulmuş.
     
 "V. Confirmed" adlı odaya giriş yapıp teyit vererek kayıt olabilirsiniz (\`${cfg.tag.taglıTag}\`) tagımızı alarak bize destek olabilirsiniz.
   
