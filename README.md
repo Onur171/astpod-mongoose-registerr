@@ -4,4 +4,4 @@ config.json dosyasını doldurmanız yeticektir.
 
 Discord: Astpod#2019
 
-Sunucumuza gelip destek alabilirsiniz: https://discord.gg/m6cWgT6yaH
+Serendia sunucumuza gelip destek alabilirsiniz: https://discord.gg/m6cWgT6yaH
