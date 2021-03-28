@@ -1,5 +1,5 @@
-const moment = require("moment");
-moment.locale("tr");
+const moment = require("moment"),
+moment.locale("tr"),
 const Base = require("../Base/Event"),
     { Client } = global,
     cfg = require('../../config.json');
@@ -13,10 +13,10 @@ class guildMemberAdd extends Base {
   
 async Execute(member) {
   member.roles.add(cfg.yetki.unregister);
-  Client.channels.cache.get(cfg.kanallar.registerChat).send(`
+  member.channels.cache.get(cfg.kanallar.registerChat).send(`
 Sunucumuza hoş geldin ${member}
 
-Hesabın **${member.client.tarihHesapla(member.user.createdAt)}** tarihinde oluşturulmuş.
+Hesabın **${moment(member.user.createdAt).format("YYYY/MM/DD HH:mm:ss")}** tarihin de oluşturulmuş.
     
 "V. Confirmed" adlı odaya giriş yapıp teyit vererek kayıt olabilirsiniz (\`${cfg.tag.taglıTag}\`) tagımızı alarak bize destek olabilirsiniz.
   
