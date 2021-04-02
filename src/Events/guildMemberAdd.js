@@ -13,7 +13,7 @@ class guildMemberAdd extends Base {
   
 async Execute(member) {
   member.roles.add(cfg.yetki.unregister);
-  member.guild.channels.cache.get(cfg.kanallar.registerChat).send(`
+  Client.guild.channels.cache.get(cfg.kanallar.registerChat).send(`
 Sunucumuza hoş geldin ${member}
 
 Hesabın **${moment(member.user.createdAt).format("YYYY/MM/DD HH:mm:ss")}** tarihin de oluşturulmuş.
