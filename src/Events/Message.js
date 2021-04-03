@@ -9,11 +9,11 @@ class Message extends Base {
         });
     }
     async Execute(message) {
-		if(message.author.bot || !message.content.startsWith(Config.Bot.Prefix)) return;
+    if(message.author.bot || !message.content.startsWith(Config.Bot.Prefix)) return;
     const args = message.content.slice(Config.Bot.Prefix.length).trim().split(/ +/);
     const command = this.Commands.get(args.shift().toLowerCase());
-		if(!command || !command.Enabled || (!message.guild && command.GuildOnly) || (!Config.Bot.Developers.includes(message.author.id) && command.DevOnly)) return;
-		if(command) command.Execute(Client, message, args, Config);
+    if(!command || !command.Enabled || (!message.guild && command.GuildOnly) || (!Config.Bot.Developers.includes(message.author.id) && command.DevOnly)) return;
+    if(command) command.Execute(Client, message, args, Config);
     }
 }
 
